@@ -1,0 +1,71 @@
+<div class="fundo">
+  <div class="caixa">
+
+    @if (tela == 'login') {
+      <div class="topo">
+        <a class="link" (click)="mudarTela('criar')">Criar conta</a>
+      </div>
+
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" [(ngModel)]="email" name="email" />
+      </div>
+
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" [(ngModel)]="senha" name="senha" />
+      </div>
+
+      <div class="linha-esqueci">
+        <a class="link" (click)="mudarTela('esqueci')">Esqueci a senha</a>
+      </div>
+
+      <button class="botao" (click)="entrar()">ENTRAR</button>
+    }
+
+    @if (tela == 'criar') {
+      <h2>Criar conta</h2>
+
+      <div class="campo">
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" [(ngModel)]="novoNome" name="nome" />
+      </div>
+
+      <div class="campo">
+        <label for="novoEmail">E-mail</label>
+        <input id="novoEmail" type="email" [(ngModel)]="novoEmail" name="novoEmail" />
+      </div>
+
+      <div class="campo">
+        <label for="novaSenha">Senha</label>
+        <input id="novaSenha" type="password" [(ngModel)]="novaSenha" name="novaSenha" />
+      </div>
+
+      <button class="botao" (click)="criarConta()">CADASTRAR</button>
+
+      <div class="linha-voltar">
+        <a class="link" (click)="mudarTela('login')">Voltar para o login</a>
+      </div>
+    }
+
+    @if (tela == 'esqueci') {
+      <h2>Esqueci a senha</h2>
+
+      <div class="campo">
+        <label for="emailRecuperar">E-mail</label>
+        <input id="emailRecuperar" type="email" [(ngModel)]="emailRecuperar" name="emailRecuperar" />
+      </div>
+
+      <button class="botao" (click)="recuperarSenha()">ENVIAR</button>
+
+      <div class="linha-voltar">
+        <a class="link" (click)="mudarTela('login')">Voltar para o login</a>
+      </div>
+    }
+
+    @if (mensagem != '') {
+      <p class="mensagem">{{ mensagem }}</p>
+    }
+
+  </div>
+</div>

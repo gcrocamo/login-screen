@@ -1,0 +1,82 @@
+.fundo {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.caixa {
+  background-color: white;
+  border: 2px solid #eeeeee;
+  padding: 30px;
+  width: 400px;
+}
+
+.topo {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.campo {
+  border: 2px solid #e91e8c;
+  padding: 8px;
+  margin-bottom: 25px;
+}
+
+.campo label {
+  color: #e91e8c;
+  font-size: 15px;
+}
+
+.campo input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px 0px;
+  box-sizing: border-box;
+}
+
+.linha-esqueci {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.linha-voltar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.link {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.botao {
+  width: 100%;
+  background-color: white;
+  border: 2px solid black;
+  padding: 12px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: black;
+  color: white;
+}
+
+.mensagem {
+  text-align: center;
+  color: #333333;
+}
